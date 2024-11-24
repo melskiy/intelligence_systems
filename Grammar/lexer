@@ -1,0 +1,14 @@
+lexer grammar ExprLexer;
+
+CAPABLE : 'capable' ;
+INCLUDE : 'include' ;
+MUST : 'must' ;
+WHEN : 'when' ;
+ADD : 'add' ;
+AS : 'as' ;
+PREDATES : 'predates' ;
+
+
+ID: [a-zA-Z_]+ ;
+
+WS: [ \t\n\r\f]+ -> skip ;
