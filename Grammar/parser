@@ -1,0 +1,30 @@
+parser grammar ExprParser;
+options { tokenVocab=ExprLexer; }
+
+game
+    :(
+        includeDefenition
+        | predatesDefenition
+        | addDefenition
+        | mustDefenition
+        | capableDefenition
+        | actionDefenition
+        | interactionDefenition
+    )
+    +;
+
+capableDefenition : ID CAPABLE ID;
+
+includeDefenition : ID INCLUDE ID;
+
+addDefenition : ADD ID AS ID;
+
+predatesDefenition : ID PREDATES ID;
+
+mustDefenition : ID MUST ID (WHEN ID)*;
+
+actionDefenition : ID FIGHT ID
+                | ID DEFEND ID
+                | ID TRADE ID;
+
+interactionDefenition : ID 'interacts_with' ID;
