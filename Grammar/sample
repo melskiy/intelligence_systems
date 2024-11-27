@@ -32,3 +32,9 @@ Respawn predates BeDestroid
 
 Game must CheckCollision when ForwardMove
 Game include CheckWinner
+
+SpaceShip fight Pirate
+Pirate defend SpaceShip
+SpaceShip trade Pirate
+
+Player1 interacts_with Player2

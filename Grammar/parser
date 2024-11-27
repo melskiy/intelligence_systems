@@ -6,8 +6,10 @@ game
         includeDefenition
         | predatesDefenition
         | addDefenition
-        | mustDefenition 
+        | mustDefenition
         | capableDefenition
+        | actionDefenition
+        | interactionDefenition
     )
     +;
 
@@ -19,4 +21,10 @@ addDefenition : ADD ID AS ID;
 
 predatesDefenition : ID PREDATES ID;
 
-mustDefenition: ID MUST ID (WHEN ID)*;
+mustDefenition : ID MUST ID (WHEN ID)*;
+
+actionDefenition : ID FIGHT ID
+                | ID DEFEND ID
+                | ID TRADE ID;
+
+interactionDefenition : ID 'interacts_with' ID;

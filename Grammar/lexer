@@ -7,8 +7,11 @@ WHEN : 'when' ;
 ADD : 'add' ;
 AS : 'as' ;
 PREDATES : 'predates' ;
+FIGHT : 'fight' ;
+DEFEND : 'defend' ;
+TRADE : 'trade' ;
+INTERACTS_WITH : 'interacts_with' ;
 
+ID : [a-zA-Z_]+ ;
 
-ID: [a-zA-Z_]+ ;
-
-WS: [ \t\n\r\f]+ -> skip ;
+WS : [ \t\n\r\f]+ -> skip ;
