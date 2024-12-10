@@ -33,3 +33,4 @@ class FiniteStateMachineImpl(FiniteStateMachine):
             self.current_state = initial_state
         except Exception:
             raise ValueError(f"Состояние '{initial_state}' не добавлено в автомат.")
+            
